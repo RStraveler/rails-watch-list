@@ -11,3 +11,34 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/_small_card";
+@import "components/form";
+
+body {
+  background-color: rgb(238, 255, 0);
+}
+
+h1 {
+  font-family: monospace;
+  font-weight: 100;
+  margin-top: 48px;
+  text-align: center;
+  border: 6px dotted rgb(0, 0, 0);
+}
+
+.btn-link {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: 100;
+  background: linear-gradient(#fb16ef, #b100a2);
+  transition: background 0.3s ease;
+  border: 1px solid #ffffff;
+  margin: 48px;
+  text-align: center;
+}
+
+.btn-link:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}
