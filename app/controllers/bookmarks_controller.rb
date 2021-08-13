@@ -6,12 +6,20 @@ class BookmarksController < ApplicationController
 
   def create
     @bookmark = Bookmark.new(params_bookmark)
+    @list = List.find(params[:list_id])
+    @bookmark.list = @list
 
     if @bookmark.save
-      redirect_to list_path(params[:id]), notice: 'Your new bookmark was created.'
+      redirect_to list_path(params[:list_id]), notice: 'Your new bookmark was created.'
     else
       render :new
     end
+  end
+
+  def destroy
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.destroy
+    redirect_to @bookmark.list
   end
 
   private
