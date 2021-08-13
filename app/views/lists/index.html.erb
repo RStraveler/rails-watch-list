@@ -11,11 +11,10 @@
       <%  end %>
       <div class="card-product-infos">
       <h2><%= link_to list.name, list %></h2>
+      <p><%= link_to "-", list_path(list), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %></p>
       </div>
     </div>
   <% end %>
   </ul>
-  <div class="btn-link">
-    <%= link_to "Create a new list", new_list_path %>
-  </div>
+
 </div>
