@@ -8,6 +8,7 @@
     <div class="card-product-infos card-product">
     <%= cl_image_tag movie.poster_url, height: 300, crop: :fill %>
     <p><%= movie.title %></p>
+     <p><%= link_to "-", bookmark_path(movie), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %></p>
     </div>
     <% end %>
 </div>
